@@ -1,0 +1,241 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hamburger {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Navigation Menu */
+nav {
+    position: fixed;
+    top: 0;
+    margin-top: 55px;
+    left: -250px;
+    width: 200px;
+    height: 100vh;
+    background: #333;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+}
+
+nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+/* Hero Section */
+.hero {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('background.jpg') no-repeat center center/cover;
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(23, 18, 18);
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: hsl(0, 100%, 50%);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: green;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+/* Footer Styling */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #222;
+    color: white;
+    padding: 0px;
+    flex-wrap: wrap;
+    font-size: 0.7rem; /* Reduced overall text size */
+}
+
+.footer div {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Left Section */
+.footer-left h3 {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.footer-left span {
+    color: #67dbed;
+}
+
+.contact-footer h3 {
+    margin-top: 15px;
+}
+
+.cta-button {
+    background: hwb(200 0% 0%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: hsl(237, 100%, 45%);
+}
+
+/* Center Section - Social Media */
+.footer-center {
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: rgb(211, 202, 202);
+    font-size: 0.7rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: hsl(0, 100%, 50%);
+}
+
+/* Right Section - Feedback */
+.footer-feedback textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    font-size: 0.7rem;
+}
+
+.footer-feedback button {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer div {
+        padding: 10px 0;
+    }
+
+    .cta-button {
+        width:100%;
+}
+}
