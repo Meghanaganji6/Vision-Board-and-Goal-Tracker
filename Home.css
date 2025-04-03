@@ -36,38 +36,77 @@ nav {
     position: fixed;
     top: 0;
     margin-top: 55px;
-    left: -250px;
-    width: 200px;
+    left: -250px; /* Initially hidden */
+    width: 220px;
     height: 100vh;
-    background: #333;
-    transition: right 0.3s ease;
+    background: linear-gradient(135deg, #222, #444); /* Modern gradient */
+    transition: left 0.4s ease-in-out; /* Smooth slide effect */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 20px;
+    border-radius: 0 0 0 0; /* Rounded right edges */
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.4); /* Soft shadow */
 }
 
+/* Navigation List */
 nav ul {
     list-style: none;
     width: 100%;
+    padding: 0;
 }
 
+/* Menu Items */
 nav ul li {
     width: 100%;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
 }
 
+/* Links */
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.rem;
     display: block;
-    transition: background 0.3s;
+    padding: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Hover Effect */
+nav ul li:hover {
+    
+    transform: scale(1.00); /* Slight zoom effect */
 }
 
 nav ul li a:hover {
-    background: #555;
+    background: hsl(221, 83%, 70%); /* Bright orange on hover */
+    color: white;
+    border-radius: 0;
+    /* Glow effect */
+}
+
+/* Slide-in Effect */
+nav.active {
+    left: 0; /* Show menu */
+}
+
+.streak-counter {
+    background-color: #5f5d5d; /* Orange background */
+    color: white; /* White text */
+    padding: 8px 15px; /* Adds space around text */
+    border-radius: 10px; /* Makes it rounded */
+    font-weight: bold; /* Makes text bold */
+    display: inline-block; /* Keeps it inline */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adds slight shadow */
+    transition: 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.streak-counter:hover {
+    background-color: #e65c00; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarges on hover */
 }
 
 /* Hero Section */
@@ -155,7 +194,7 @@ nav ul li a:hover {
 
 .footer div {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Left Section */
@@ -194,17 +233,18 @@ nav ul li a:hover {
 
 .social-icons {
     margin-top: 10px;
+    font-size: 40px;
 }
 
 .social-icons a {
     color: rgb(211, 202, 202);
-    font-size: 0.7rem;
+    font-size: 20px;
     margin: 0 10px;
     transition: 0.3s;
 }
 
 .social-icons a:hover {
-    color: hsl(0, 100%, 50%);
+    color: rgb(0, 110, 255);
 }
 
 /* Right Section - Feedback */
@@ -221,7 +261,7 @@ nav ul li a:hover {
 .footer-feedback button {
     display: block;
     margin-top: 10px;
-    width: 100%;
+    width: 20%;
 }
 
 /* Responsive Design */
